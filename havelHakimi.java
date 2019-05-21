@@ -26,12 +26,9 @@ public class havelHakimi
 				}
 
 			}
-
 		}
-
 		// Convert linkedList to array
 		return toIntArray(desList);
-
 	}
 
 	// Warmup 3: Length check
@@ -98,7 +95,6 @@ public class havelHakimi
     	System.out.println("Array Elements:");
     	for (int i = 0; i < array.length; i++)
     	   System.out.println(array[i]);
-	    
 	}
 
 	public static int[] toIntArray(List<Integer> list)
@@ -116,10 +112,6 @@ public class havelHakimi
 			System.out.println("TRUUU");
 		else
 			System.out.println("FALSEE");
-
-
 	}
 
 }
-
-
