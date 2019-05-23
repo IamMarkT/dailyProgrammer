@@ -50,29 +50,29 @@ public class havelHakimi
 
 	public static boolean havelHakimi(int[] oriArr)
 	{
-		int[] main;
+		int[] stepOne, stepFour;
 		int max;
-		int[] newMain;
+		
 
 		// Step 1 & 3
-		main = noZeroDesSort(oriArr);
+		stepOne = noZeroDesSort(oriArr);
 		// Step 2
-		if (main.length == 0)
+		if (stepOne.length == 0)
 			return true;
 
 		// Step 4
-		max = main[0];
-		newMain = Arrays.copyOfRange(main, 1, main.length - 1);
+		max = stepOne[0];
+		stepFour = Arrays.copyOfRange(stepOne, 1, stepOne.length - 1);
 
 		// Step 5
-		if (lengthCheck(max, newMain))
+		if (lengthCheck(max, stepFour))
 			return false;
 
 		// Step 6
-		newMain = frontElim(max, newMain);
+		stepFour = frontElim(max, stepFour);
 
 		// Recursive call until true or false is returned
-		return havelHakimi(newMain);
+		return havelHakimi(stepFour);
 
 	}
 
@@ -107,11 +107,46 @@ public class havelHakimi
 
 	public static void main(String [] args)
 	{
-		int[] array1 = {16, 9, 9, 15, 9, 7, 9, 11, 17, 11, 4, 9, 12, 14, 14, 12, 17, 0, 3, 16};
-		if(havelHakimi(array1))
+		int[] array1 = {5, 3, 0, 2, 6, 2, 0, 7, 2, 5};
+		int[] array3_t = {1, 1};
+		int[] array3_f = {6, 5, 5, 3, 2, 2, 2};
+		int[] array4_1 = {5, 4, 3, 2, 1};
+		int[] array4_2 = {14, 13, 13, 13, 12, 10,
+							8, 8, 7, 7, 6, 6, 4, 4, 2};
+
+
+
+		// Test Warmup 1/2
+		printArray(noZeroDesSort(array1));
+		// 7, 6, 5, 5, 3, 2, 2, 2
+
+
+		// Test Warmup 3
+		if(lengthCheck(3, array3_t))
+			System.out.println("W3t-TRUE");
+		else
+			System.out.println("W3t-FALSE");
+		// W3t-TRUE
+
+		if(lengthCheck(7, array3_f))
+			System.out.println("W3f-TRUE");
+		else
+			System.out.println("W3f-FALSE");
+		// W3f-FALSE
+
+
+		// Test Warmup 4
+		printArray(frontElim(4, array4_1));
+		// 4, 3, 2, 1, 1
+		printArray(frontElim(11, array4_2));
+		// 13, 12, 12, 12, 11, 9, 7, 7, 6, 6, 5, 6, 4, 4, 2
+
+
+/*
+		if(havelHakimi(array))
 			System.out.println("TRUUU");
 		else
-			System.out.println("FALSEE");
+			System.out.println("FALSEE");*/
 	}
 
 }
