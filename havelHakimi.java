@@ -1,5 +1,10 @@
+// Mark Trinidad
+// Completed 5/23/19
+
+// [2019-05-20] Challenge #378 [Easy] The Havel-Hakimi algorithm for graph realization
+// COMPLETE
+
 import java.util.*;
-import java.io.*;
 
 public class havelHakimi
 {
@@ -49,6 +54,7 @@ public class havelHakimi
 		return desArr;
 	}
 
+	// Main function call for havelHakimi
 	public static boolean havelHakimi(int[] oriArr)
 	{
 		int[] stepOne, stepFour;
@@ -77,7 +83,7 @@ public class havelHakimi
 
 	}
 
-	// O(n): Function to get Max Value
+	// O(n): Get max value from an array
 	public static int getMax(int[] array)
 	{
 		int max = array[0];
@@ -91,6 +97,7 @@ public class havelHakimi
 		return max;
 	}
 
+	// O(n): Change List to int Array
 	public static int[] toIntArray(List<Integer> list)
 	{
 		int[] arr = new int[list.size()];

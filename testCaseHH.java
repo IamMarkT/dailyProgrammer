@@ -1,3 +1,8 @@
+// Mark Trinidad
+// havelHakimi: testCaseHH.java
+
+// Testcases to see if warmups and main havelHakimi() work
+
 import java.util.*;
 
 public class testCaseHH
