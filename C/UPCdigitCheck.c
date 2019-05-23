@@ -1,3 +1,9 @@
+// Mark Trinidad
+// Completed 1/11/19
+
+// [2018-12-17] Challenge #370 [Easy] UPC check digits
+// COMPLETE
+
 #include <stdio.h>
 #include <stdlib.h>
 
